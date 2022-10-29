@@ -13,10 +13,10 @@ def isInt(inputString):
     
 def checkDay(day,month,year):
     if isInt(day):
-        day=int(day)
+        day=int(day) # Convert the day to an integer
         if isInt(month) and isInt(year):
             month=int(month)
-            year=int(year)
+            year=int(year) # Convert the month and year to integers
             daysInMonth=int(monthrange(year,month)[1])
             if 1<=day<=daysInMonth:
                 return True
@@ -57,8 +57,9 @@ def main():
     dateArray= date.split('/')
     yearVal=checkYear(dateArray[2])
     monthVal=checkMonth(dateArray[1])
+    # If both the year and month are correct
     if yearVal and monthVal:
-        if checkDay(dateArray[0],dateArray[1],dateArray[2]):
+        if checkDay(dateArray[0],dateArray[1],dateArray[2]): # If the day is correct
             print('The date',date,'is correct!')
         
 main()
