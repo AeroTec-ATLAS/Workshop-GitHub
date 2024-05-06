@@ -53,6 +53,7 @@ def checkYear(year):
         
 def main():
     print('This program validates a date')
+    # Receive user input
     date = input('Enter your date in a dd/mm/yyyy format: ')
     dateArray = date.split('/')
     yearVal = checkYear(dateArray[2])
